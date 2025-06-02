@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { ArrowLeft, Bookmark, Share2, Clock, Calendar, Tag } from 'lucide-react';
 import { AuthorBio } from '../components/blog/AuthorBio';
+import { AIDiscussionHub } from '../components/blog/AIDiscussionHub';
 import { Button } from '../components/shared/Button';
 import { mockPosts } from '../utils/data';
 
@@ -27,7 +28,7 @@ export const PostPage = ({ post }: PostPageProps) => {
       <div className="container mx-auto px-4">
         {/* Header section */}
         <div className="max-w-4xl mx-auto mb-8">
-          <div className="flex items-center text-amber-400 mb-4">
+          <div className="flex items-center text-blue-400 mb-4">
             <button className="inline-flex items-center text-sm hover:underline">
               <ArrowLeft size={16} className="mr-1" />
               Back to Articles
@@ -40,15 +41,15 @@ export const PostPage = ({ post }: PostPageProps) => {
 
           <div className="flex flex-wrap items-center text-sm text-slate-300 gap-4 mb-8">
             <div className="flex items-center">
-              <Calendar size={16} className="mr-2 text-amber-400" />
+              <Calendar size={16} className="mr-2 text-blue-400" />
               {currentPost.date}
             </div>
             <div className="flex items-center">
-              <Clock size={16} className="mr-2 text-amber-400" />
+              <Clock size={16} className="mr-2 text-blue-400" />
               {currentPost.readTime} min read
             </div>
             <div className="flex items-center">
-              <Tag size={16} className="mr-2 text-amber-400" />
+              <Tag size={16} className="mr-2 text-blue-400" />
               {currentPost.category}
             </div>
           </div>
@@ -97,7 +98,7 @@ export const PostPage = ({ post }: PostPageProps) => {
 
         {/* Content */}
         <div className="max-w-3xl mx-auto">
-          <div className="prose prose-lg prose-invert prose-headings:font-serif prose-headings:font-bold prose-p:text-slate-300 prose-a:text-amber-400 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-amber-500 prose-blockquote:bg-slate-900 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-md mb-12">
+          <div className="prose prose-lg prose-invert prose-headings:font-serif prose-headings:font-bold prose-p:text-slate-300 prose-a:text-blue-400 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-blue-500 prose-blockquote:bg-slate-900 prose-blockquote:py-1 prose-blockquote:px-4 prose-blockquote:rounded-r-md mb-12">
             <p className="text-xl font-serif text-slate-200 mb-6 leading-relaxed">
               {currentPost.excerpt}
             </p>
@@ -152,6 +153,12 @@ export const PostPage = ({ post }: PostPageProps) => {
             </p>
           </div>
 
+          {/* AI Discussion Hub */}
+          <AIDiscussionHub 
+            articleTitle={currentPost.title}
+            articleContent={currentPost.content}
+          />
+
           {/* Tags */}
           <div className="border-t border-slate-800 pt-8 mb-12">
             <div className="flex flex-wrap gap-2">
@@ -188,7 +195,7 @@ export const PostPage = ({ post }: PostPageProps) => {
                       />
                     </div>
                     <div className="p-4">
-                      <h4 className="text-lg font-medium text-white mb-2 line-clamp-2 group-hover:text-amber-400 transition-colors">
+                      <h4 className="text-lg font-medium text-white mb-2 line-clamp-2 group-hover:text-blue-400 transition-colors">
                         {relatedPost.title}
                       </h4>
                       <p className="text-sm text-slate-400">{relatedPost.readTime} min read</p>
