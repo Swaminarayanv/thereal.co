@@ -62,7 +62,7 @@ export const Header = ({ currentPage, onPageChange }: HeaderProps) => {
           <nav className="hidden md:flex items-center space-x-8">
             <NavItem label="HOME" isActive={currentPage === 'home'} onClick={() => handleNavClick('home')} />
             <NavItem label="ARTICLES" isActive={currentPage === 'blog'} onClick={() => handleNavClick('blog')} />
-            <NavItem label="AI CHAT" isActive={currentPage === 'chat'} onClick={() => handleNavClick('chat')} />
+            <NavItem label="TOOLS" isActive={currentPage === 'chat'} onClick={() => handleNavClick('chat')} />
             <NavItem label="ABOUT" isActive={currentPage === 'about'} onClick={() => handleNavClick('about')} />
             
             {/* Social Links */}
@@ -120,7 +120,7 @@ export const Header = ({ currentPage, onPageChange }: HeaderProps) => {
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <MobileNavItem label="HOME" isActive={currentPage === 'home'} onClick={() => handleNavClick('home')} />
             <MobileNavItem label="ARTICLES" isActive={currentPage === 'blog'} onClick={() => handleNavClick('blog')} />
-            <MobileNavItem label="AI CHAT" isActive={currentPage === 'chat'} onClick={() => handleNavClick('chat')} />
+            <MobileNavItem label="TOOLS" isActive={currentPage === 'chat'} onClick={() => handleNavClick('chat')} />
             <MobileNavItem label="ABOUT" isActive={currentPage === 'about'} onClick={() => handleNavClick('about')} />
           </div>
         </div>
