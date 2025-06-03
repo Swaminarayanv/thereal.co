@@ -5,7 +5,7 @@ import { HomePage } from './pages/HomePage';
 import { BlogPage } from './pages/BlogPage';
 import { PostPage } from './pages/PostPage';
 import { AboutPage } from './pages/AboutPage';
-import { ChatPage } from './pages/ChatPage';
+import { CompanionsPage } from './pages/CompanionsPage';
 import { ParticlesBackground } from './components/shared/ParticlesBackground';
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
         {currentPage === 'home' && <HomePage onPostSelect={handlePostSelect} onPageChange={handlePageChange} />}
         {currentPage === 'blog' && <BlogPage onPostSelect={handlePostSelect} />}
         {currentPage === 'post' && <PostPage post={currentPost} />}
-        {currentPage === 'chat' && <ChatPage />}
+        {currentPage === 'companions' && <CompanionsPage />}
         {currentPage === 'about' && <AboutPage />}
       </main>
       
