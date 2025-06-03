@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Bot, Star, Trending, Users, Search, Plus } from 'lucide-react';
+import { Bot, Star, TrendingUp as Trending, Users, Search, Plus } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '../components/shared/Button';
 
